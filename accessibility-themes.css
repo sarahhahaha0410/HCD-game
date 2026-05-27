@@ -1,0 +1,1069 @@
+/* Full-page accessibility theme overrides. Loaded after the base scene art. */
+
+[data-theme="protanopia"],
+[data-theme="deuteranopia"],
+[data-theme="tritanopia"],
+[data-theme="achromatopsia"] {
+  color-scheme: light;
+}
+
+[data-theme="protanopia"] body,
+[data-theme="deuteranopia"] body,
+[data-theme="tritanopia"] body,
+[data-theme="achromatopsia"] body {
+  background:
+    radial-gradient(circle at 16% 14%, var(--cyan-soft), transparent 30%),
+    linear-gradient(180deg, var(--wall) 0%, var(--bg) 100%);
+}
+
+[data-theme="protanopia"] .scene,
+[data-theme="deuteranopia"] .scene,
+[data-theme="tritanopia"] .scene,
+[data-theme="achromatopsia"] .scene {
+  background:
+    linear-gradient(rgba(80, 110, 130, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(80, 110, 130, 0.08) 1px, transparent 1px),
+    linear-gradient(180deg, var(--wall), var(--bg));
+  background-size: 42px 42px, 42px 42px, auto;
+  color: var(--text);
+}
+
+[data-theme="protanopia"] .tutorial-panel,
+[data-theme="protanopia"] .title-block,
+[data-theme="protanopia"] .objective-panel,
+[data-theme="protanopia"] .inventory-panel,
+[data-theme="protanopia"] .dialogue-frame,
+[data-theme="protanopia"] .settings-card,
+[data-theme="protanopia"] .manual-hint-panel,
+[data-theme="protanopia"] .scene-title,
+[data-theme="protanopia"] .monitor-shell,
+[data-theme="protanopia"] .bambu-ui,
+[data-theme="protanopia"] .ui-card,
+[data-theme="protanopia"] .tray-board,
+[data-theme="protanopia"] .tray-items,
+[data-theme="protanopia"] .assembly-zone,
+[data-theme="protanopia"] .tray-return-zone,
+[data-theme="protanopia"] .printer-unit,
+[data-theme="protanopia"] .printer-transfer-panel,
+[data-theme="protanopia"] .printer-screen,
+[data-theme="protanopia"] .inventory-item,
+[data-theme="protanopia"] .pickup-item,
+[data-theme="protanopia"] .model-preview,
+[data-theme="protanopia"] .model-inspector,
+[data-theme="protanopia"] .door-reader,
+[data-theme="deuteranopia"] .tutorial-panel,
+[data-theme="deuteranopia"] .title-block,
+[data-theme="deuteranopia"] .objective-panel,
+[data-theme="deuteranopia"] .inventory-panel,
+[data-theme="deuteranopia"] .dialogue-frame,
+[data-theme="deuteranopia"] .settings-card,
+[data-theme="deuteranopia"] .manual-hint-panel,
+[data-theme="deuteranopia"] .scene-title,
+[data-theme="deuteranopia"] .monitor-shell,
+[data-theme="deuteranopia"] .bambu-ui,
+[data-theme="deuteranopia"] .ui-card,
+[data-theme="deuteranopia"] .tray-board,
+[data-theme="deuteranopia"] .tray-items,
+[data-theme="deuteranopia"] .assembly-zone,
+[data-theme="deuteranopia"] .tray-return-zone,
+[data-theme="deuteranopia"] .printer-unit,
+[data-theme="deuteranopia"] .printer-transfer-panel,
+[data-theme="deuteranopia"] .printer-screen,
+[data-theme="deuteranopia"] .inventory-item,
+[data-theme="deuteranopia"] .pickup-item,
+[data-theme="deuteranopia"] .model-preview,
+[data-theme="deuteranopia"] .model-inspector,
+[data-theme="deuteranopia"] .door-reader,
+[data-theme="tritanopia"] .tutorial-panel,
+[data-theme="tritanopia"] .title-block,
+[data-theme="tritanopia"] .objective-panel,
+[data-theme="tritanopia"] .inventory-panel,
+[data-theme="tritanopia"] .dialogue-frame,
+[data-theme="tritanopia"] .settings-card,
+[data-theme="tritanopia"] .manual-hint-panel,
+[data-theme="tritanopia"] .scene-title,
+[data-theme="tritanopia"] .monitor-shell,
+[data-theme="tritanopia"] .bambu-ui,
+[data-theme="tritanopia"] .ui-card,
+[data-theme="tritanopia"] .tray-board,
+[data-theme="tritanopia"] .tray-items,
+[data-theme="tritanopia"] .assembly-zone,
+[data-theme="tritanopia"] .tray-return-zone,
+[data-theme="tritanopia"] .printer-unit,
+[data-theme="tritanopia"] .printer-transfer-panel,
+[data-theme="tritanopia"] .printer-screen,
+[data-theme="tritanopia"] .inventory-item,
+[data-theme="tritanopia"] .pickup-item,
+[data-theme="tritanopia"] .model-preview,
+[data-theme="tritanopia"] .model-inspector,
+[data-theme="tritanopia"] .door-reader,
+[data-theme="achromatopsia"] .tutorial-panel,
+[data-theme="achromatopsia"] .title-block,
+[data-theme="achromatopsia"] .objective-panel,
+[data-theme="achromatopsia"] .inventory-panel,
+[data-theme="achromatopsia"] .dialogue-frame,
+[data-theme="achromatopsia"] .settings-card,
+[data-theme="achromatopsia"] .manual-hint-panel,
+[data-theme="achromatopsia"] .scene-title,
+[data-theme="achromatopsia"] .monitor-shell,
+[data-theme="achromatopsia"] .bambu-ui,
+[data-theme="achromatopsia"] .ui-card,
+[data-theme="achromatopsia"] .tray-board,
+[data-theme="achromatopsia"] .tray-items,
+[data-theme="achromatopsia"] .assembly-zone,
+[data-theme="achromatopsia"] .tray-return-zone,
+[data-theme="achromatopsia"] .printer-unit,
+[data-theme="achromatopsia"] .printer-transfer-panel,
+[data-theme="achromatopsia"] .printer-screen,
+[data-theme="achromatopsia"] .inventory-item,
+[data-theme="achromatopsia"] .pickup-item,
+[data-theme="achromatopsia"] .model-preview,
+[data-theme="achromatopsia"] .model-inspector,
+[data-theme="achromatopsia"] .door-reader {
+  background: var(--panel-strong);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+[data-theme="protanopia"] .hotspot,
+[data-theme="protanopia"] .slice-button,
+[data-theme="protanopia"] .printer-screen-print,
+[data-theme="protanopia"] .completion-button,
+[data-theme="deuteranopia"] .hotspot,
+[data-theme="deuteranopia"] .slice-button,
+[data-theme="deuteranopia"] .printer-screen-print,
+[data-theme="deuteranopia"] .completion-button,
+[data-theme="tritanopia"] .hotspot,
+[data-theme="tritanopia"] .slice-button,
+[data-theme="tritanopia"] .printer-screen-print,
+[data-theme="tritanopia"] .completion-button,
+[data-theme="achromatopsia"] .hotspot,
+[data-theme="achromatopsia"] .slice-button,
+[data-theme="achromatopsia"] .printer-screen-print,
+[data-theme="achromatopsia"] .completion-button {
+  background: var(--success);
+  color: var(--panel-strong);
+  border-color: var(--success);
+}
+
+[data-theme="protanopia"] .theme-choice.active,
+[data-theme="deuteranopia"] .theme-choice.active,
+[data-theme="tritanopia"] .theme-choice.active,
+[data-theme="achromatopsia"] .theme-choice.active,
+[data-theme="protanopia"] .ui-status,
+[data-theme="deuteranopia"] .ui-status,
+[data-theme="tritanopia"] .ui-status,
+[data-theme="achromatopsia"] .ui-status,
+[data-theme="protanopia"] .support-preview-label,
+[data-theme="deuteranopia"] .support-preview-label,
+[data-theme="tritanopia"] .support-preview-label,
+[data-theme="achromatopsia"] .support-preview-label {
+  background: var(--cyan-soft);
+  color: var(--text);
+  border-color: var(--cyan);
+}
+
+[data-theme="protanopia"] .post-it-hint,
+[data-theme="deuteranopia"] .post-it-hint,
+[data-theme="tritanopia"] .post-it-hint,
+[data-theme="achromatopsia"] .post-it-hint {
+  background: var(--warning-soft);
+  border-color: var(--warning);
+  color: var(--text);
+}
+
+[data-theme="protanopia"] .state-loaded,
+[data-theme="deuteranopia"] .state-loaded,
+[data-theme="tritanopia"] .state-loaded,
+[data-theme="achromatopsia"] .state-loaded,
+[data-theme="protanopia"] .printer-card-slot.loaded,
+[data-theme="deuteranopia"] .printer-card-slot.loaded,
+[data-theme="tritanopia"] .printer-card-slot.loaded,
+[data-theme="achromatopsia"] .printer-card-slot.loaded {
+  border-color: var(--success);
+  background: var(--success-soft);
+}
+
+[data-theme="protanopia"] .error-pop,
+[data-theme="deuteranopia"] .error-pop,
+[data-theme="tritanopia"] .error-pop,
+[data-theme="achromatopsia"] .error-pop,
+[data-theme="protanopia"] .drop-rejected,
+[data-theme="deuteranopia"] .drop-rejected,
+[data-theme="tritanopia"] .drop-rejected,
+[data-theme="achromatopsia"] .drop-rejected {
+  border-color: var(--error);
+  background:
+    repeating-linear-gradient(45deg, var(--error-soft) 0 8px, transparent 8px 16px),
+    var(--panel-strong);
+}
+
+[data-theme="protanopia"] .sd-card,
+[data-theme="protanopia"] .printer-sd-card,
+[data-theme="protanopia"] .printer-slot-card,
+[data-theme="deuteranopia"] .sd-card,
+[data-theme="deuteranopia"] .printer-sd-card,
+[data-theme="deuteranopia"] .printer-slot-card,
+[data-theme="tritanopia"] .sd-card,
+[data-theme="tritanopia"] .printer-sd-card,
+[data-theme="tritanopia"] .printer-slot-card,
+[data-theme="achromatopsia"] .sd-card,
+[data-theme="achromatopsia"] .printer-sd-card,
+[data-theme="achromatopsia"] .printer-slot-card {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.14) 0 16%, transparent 16%),
+    linear-gradient(180deg, var(--sd-card-start), var(--sd-card-end));
+}
+
+[data-theme="achromatopsia"] .hotspot,
+[data-theme="achromatopsia"] .slice-button,
+[data-theme="achromatopsia"] .printer-screen-print,
+[data-theme="achromatopsia"] .completion-button {
+  background:
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.18) 0 8px, transparent 8px 16px),
+    var(--success);
+}
+
+[data-theme="achromatopsia"] .theme-choice.active,
+[data-theme="achromatopsia"] .ui-status,
+[data-theme="achromatopsia"] .support-preview-label {
+  background:
+    repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.08) 0 6px, transparent 6px 12px),
+    var(--panel-strong);
+}
+
+[data-theme="protanopia"] {
+  --accessible-floor-line: rgba(17, 62, 94, 0.18);
+  --accessible-fixture: #e9f1f6;
+  --accessible-fixture-strong: #fbfdff;
+  --accessible-fixture-mid: #b5c9d6;
+  --accessible-fixture-deep: #6b8799;
+  --accessible-machine: #5f7890;
+  --accessible-machine-deep: #273f52;
+  --accessible-screen: #0f2b3e;
+  --accessible-screen-panel: #1c4057;
+  --accessible-screen-text: #f6fbff;
+  --accessible-screen-muted: #d0e5f0;
+  --accessible-card: #1f4e79;
+  --accessible-card-deep: #0e2d47;
+  --accessible-card-text: #ffffff;
+  --accessible-adapter: #f5f8fb;
+  --accessible-adapter-edge: #8fa5b5;
+  --accessible-worktop: #c99035;
+  --accessible-worktop-deep: #8a5f19;
+  --accessible-action: #0072b2;
+  --accessible-action-text: #ffffff;
+  --accessible-disabled: #d7e2e9;
+  --accessible-disabled-text: #213747;
+}
+
+[data-theme="deuteranopia"] {
+  --accessible-floor-line: rgba(16, 70, 99, 0.18);
+  --accessible-fixture: #e9f2f7;
+  --accessible-fixture-strong: #fbfdff;
+  --accessible-fixture-mid: #b4cbd8;
+  --accessible-fixture-deep: #68869a;
+  --accessible-machine: #5d7891;
+  --accessible-machine-deep: #243e52;
+  --accessible-screen: #0e2d42;
+  --accessible-screen-panel: #1d465f;
+  --accessible-screen-text: #f7fcff;
+  --accessible-screen-muted: #d1e6f1;
+  --accessible-card: #1b5578;
+  --accessible-card-deep: #0d3148;
+  --accessible-card-text: #ffffff;
+  --accessible-adapter: #f5f8fb;
+  --accessible-adapter-edge: #8ea7b7;
+  --accessible-worktop: #d09323;
+  --accessible-worktop-deep: #8a600d;
+  --accessible-action: #0072b2;
+  --accessible-action-text: #ffffff;
+  --accessible-disabled: #d7e2e9;
+  --accessible-disabled-text: #213747;
+}
+
+[data-theme="tritanopia"] {
+  --accessible-floor-line: rgba(83, 50, 76, 0.18);
+  --accessible-fixture: #f4ece9;
+  --accessible-fixture-strong: #fffaf7;
+  --accessible-fixture-mid: #d5c1ba;
+  --accessible-fixture-deep: #8a7070;
+  --accessible-machine: #7c6476;
+  --accessible-machine-deep: #3c2d42;
+  --accessible-screen: #231b2e;
+  --accessible-screen-panel: #463052;
+  --accessible-screen-text: #fffaf7;
+  --accessible-screen-muted: #ead7df;
+  --accessible-card: #533f68;
+  --accessible-card-deep: #24172f;
+  --accessible-card-text: #ffffff;
+  --accessible-adapter: #fff8f3;
+  --accessible-adapter-edge: #9b8585;
+  --accessible-worktop: #bd6b2d;
+  --accessible-worktop-deep: #7e4318;
+  --accessible-action: #7f4f9b;
+  --accessible-action-text: #ffffff;
+  --accessible-disabled: #e6d9d4;
+  --accessible-disabled-text: #35283a;
+}
+
+[data-theme="achromatopsia"] {
+  --accessible-floor-line: rgba(38, 45, 51, 0.18);
+  --accessible-fixture: #eceff1;
+  --accessible-fixture-strong: #ffffff;
+  --accessible-fixture-mid: #c5ccd1;
+  --accessible-fixture-deep: #757f86;
+  --accessible-machine: #626d75;
+  --accessible-machine-deep: #232b31;
+  --accessible-screen: #101820;
+  --accessible-screen-panel: #2a343d;
+  --accessible-screen-text: #ffffff;
+  --accessible-screen-muted: #dbe3e8;
+  --accessible-card: #333d45;
+  --accessible-card-deep: #161d22;
+  --accessible-card-text: #ffffff;
+  --accessible-adapter: #f7f7f7;
+  --accessible-adapter-edge: #8a8f94;
+  --accessible-worktop: #9b9b9b;
+  --accessible-worktop-deep: #646464;
+  --accessible-action: #111820;
+  --accessible-action-text: #ffffff;
+  --accessible-disabled: #d8dde0;
+  --accessible-disabled-text: #111820;
+}
+
+[data-theme="protanopia"] .door-scene,
+[data-theme="protanopia"] .room-scene,
+[data-theme="protanopia"] .workstation-scene,
+[data-theme="protanopia"] .tray-scene,
+[data-theme="protanopia"] .printer-scene,
+[data-theme="deuteranopia"] .door-scene,
+[data-theme="deuteranopia"] .room-scene,
+[data-theme="deuteranopia"] .workstation-scene,
+[data-theme="deuteranopia"] .tray-scene,
+[data-theme="deuteranopia"] .printer-scene,
+[data-theme="tritanopia"] .door-scene,
+[data-theme="tritanopia"] .room-scene,
+[data-theme="tritanopia"] .workstation-scene,
+[data-theme="tritanopia"] .tray-scene,
+[data-theme="tritanopia"] .printer-scene,
+[data-theme="achromatopsia"] .door-scene,
+[data-theme="achromatopsia"] .room-scene,
+[data-theme="achromatopsia"] .workstation-scene,
+[data-theme="achromatopsia"] .tray-scene,
+[data-theme="achromatopsia"] .printer-scene {
+  background:
+    linear-gradient(rgba(80, 100, 116, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(80, 100, 116, 0.08) 1px, transparent 1px),
+    linear-gradient(180deg, var(--wall) 0%, var(--bg) 100%);
+  background-size: 42px 42px, 42px 42px, auto;
+}
+
+[data-theme="protanopia"] .room-floor,
+[data-theme="deuteranopia"] .room-floor,
+[data-theme="tritanopia"] .room-floor,
+[data-theme="achromatopsia"] .room-floor {
+  background:
+    linear-gradient(var(--accessible-floor-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--accessible-floor-line) 1px, transparent 1px),
+    linear-gradient(180deg, var(--floor), var(--bg-deep));
+  background-size: 54px 54px, 54px 54px, auto;
+}
+
+[data-theme="protanopia"] .door-frame,
+[data-theme="protanopia"] .top-printer-bank,
+[data-theme="protanopia"] .back-printer-bank,
+[data-theme="protanopia"] .bench-block,
+[data-theme="protanopia"] .side-printer-block,
+[data-theme="protanopia"] .side-tray-block,
+[data-theme="protanopia"] .room-aisle,
+[data-theme="protanopia"] .room-bin,
+[data-theme="protanopia"] .monitor-shell,
+[data-theme="protanopia"] .laptop-base,
+[data-theme="protanopia"] .tray-items,
+[data-theme="protanopia"] .assembly-zone,
+[data-theme="protanopia"] .tray-return-zone,
+[data-theme="protanopia"] .pickup-item,
+[data-theme="protanopia"] .assembly-card-lane,
+[data-theme="deuteranopia"] .door-frame,
+[data-theme="deuteranopia"] .top-printer-bank,
+[data-theme="deuteranopia"] .back-printer-bank,
+[data-theme="deuteranopia"] .bench-block,
+[data-theme="deuteranopia"] .side-printer-block,
+[data-theme="deuteranopia"] .side-tray-block,
+[data-theme="deuteranopia"] .room-aisle,
+[data-theme="deuteranopia"] .room-bin,
+[data-theme="deuteranopia"] .monitor-shell,
+[data-theme="deuteranopia"] .laptop-base,
+[data-theme="deuteranopia"] .tray-items,
+[data-theme="deuteranopia"] .assembly-zone,
+[data-theme="deuteranopia"] .tray-return-zone,
+[data-theme="deuteranopia"] .pickup-item,
+[data-theme="deuteranopia"] .assembly-card-lane,
+[data-theme="tritanopia"] .door-frame,
+[data-theme="tritanopia"] .top-printer-bank,
+[data-theme="tritanopia"] .back-printer-bank,
+[data-theme="tritanopia"] .bench-block,
+[data-theme="tritanopia"] .side-printer-block,
+[data-theme="tritanopia"] .side-tray-block,
+[data-theme="tritanopia"] .room-aisle,
+[data-theme="tritanopia"] .room-bin,
+[data-theme="tritanopia"] .monitor-shell,
+[data-theme="tritanopia"] .laptop-base,
+[data-theme="tritanopia"] .tray-items,
+[data-theme="tritanopia"] .assembly-zone,
+[data-theme="tritanopia"] .tray-return-zone,
+[data-theme="tritanopia"] .pickup-item,
+[data-theme="tritanopia"] .assembly-card-lane,
+[data-theme="achromatopsia"] .door-frame,
+[data-theme="achromatopsia"] .top-printer-bank,
+[data-theme="achromatopsia"] .back-printer-bank,
+[data-theme="achromatopsia"] .bench-block,
+[data-theme="achromatopsia"] .side-printer-block,
+[data-theme="achromatopsia"] .side-tray-block,
+[data-theme="achromatopsia"] .room-aisle,
+[data-theme="achromatopsia"] .room-bin,
+[data-theme="achromatopsia"] .monitor-shell,
+[data-theme="achromatopsia"] .laptop-base,
+[data-theme="achromatopsia"] .tray-items,
+[data-theme="achromatopsia"] .assembly-zone,
+[data-theme="achromatopsia"] .tray-return-zone,
+[data-theme="achromatopsia"] .pickup-item,
+[data-theme="achromatopsia"] .assembly-card-lane {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.32), transparent 18%),
+    linear-gradient(180deg, var(--accessible-fixture-strong), var(--accessible-fixture));
+  border-color: var(--border);
+  color: var(--text);
+}
+
+[data-theme="protanopia"] .room-back-strip,
+[data-theme="protanopia"] .desk-ledge,
+[data-theme="protanopia"] .tray-board,
+[data-theme="deuteranopia"] .room-back-strip,
+[data-theme="deuteranopia"] .desk-ledge,
+[data-theme="deuteranopia"] .tray-board,
+[data-theme="tritanopia"] .room-back-strip,
+[data-theme="tritanopia"] .desk-ledge,
+[data-theme="tritanopia"] .tray-board,
+[data-theme="achromatopsia"] .room-back-strip,
+[data-theme="achromatopsia"] .desk-ledge,
+[data-theme="achromatopsia"] .tray-board {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.24), transparent 16%),
+    linear-gradient(180deg, var(--accessible-worktop), var(--accessible-worktop-deep));
+}
+
+[data-theme="protanopia"] .bank-printer,
+[data-theme="protanopia"] .side-printer-face,
+[data-theme="protanopia"] .printer-unit,
+[data-theme="deuteranopia"] .bank-printer,
+[data-theme="deuteranopia"] .side-printer-face,
+[data-theme="deuteranopia"] .printer-unit,
+[data-theme="tritanopia"] .bank-printer,
+[data-theme="tritanopia"] .side-printer-face,
+[data-theme="tritanopia"] .printer-unit,
+[data-theme="achromatopsia"] .bank-printer,
+[data-theme="achromatopsia"] .side-printer-face,
+[data-theme="achromatopsia"] .printer-unit {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.16), transparent 18%),
+    linear-gradient(180deg, var(--accessible-machine), var(--accessible-machine-deep));
+}
+
+[data-theme="protanopia"] .bank-printer::before,
+[data-theme="protanopia"] .side-printer-face::before,
+[data-theme="protanopia"] .printer-window,
+[data-theme="deuteranopia"] .bank-printer::before,
+[data-theme="deuteranopia"] .side-printer-face::before,
+[data-theme="deuteranopia"] .printer-window,
+[data-theme="tritanopia"] .bank-printer::before,
+[data-theme="tritanopia"] .side-printer-face::before,
+[data-theme="tritanopia"] .printer-window,
+[data-theme="achromatopsia"] .bank-printer::before,
+[data-theme="achromatopsia"] .side-printer-face::before,
+[data-theme="achromatopsia"] .printer-window {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 16%),
+    linear-gradient(180deg, var(--accessible-screen-panel), var(--accessible-screen));
+}
+
+[data-theme="protanopia"] .printer-roof,
+[data-theme="protanopia"] .printer-bed,
+[data-theme="protanopia"] .printer-side-column,
+[data-theme="protanopia"] .keyboard-panel,
+[data-theme="protanopia"] .trackpad-panel,
+[data-theme="deuteranopia"] .printer-roof,
+[data-theme="deuteranopia"] .printer-bed,
+[data-theme="deuteranopia"] .printer-side-column,
+[data-theme="deuteranopia"] .keyboard-panel,
+[data-theme="deuteranopia"] .trackpad-panel,
+[data-theme="tritanopia"] .printer-roof,
+[data-theme="tritanopia"] .printer-bed,
+[data-theme="tritanopia"] .printer-side-column,
+[data-theme="tritanopia"] .keyboard-panel,
+[data-theme="tritanopia"] .trackpad-panel,
+[data-theme="achromatopsia"] .printer-roof,
+[data-theme="achromatopsia"] .printer-bed,
+[data-theme="achromatopsia"] .printer-side-column,
+[data-theme="achromatopsia"] .keyboard-panel,
+[data-theme="achromatopsia"] .trackpad-panel {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.35), transparent 18%),
+    linear-gradient(180deg, var(--accessible-fixture-mid), var(--accessible-fixture-deep));
+}
+
+[data-theme="protanopia"] .printer-screen,
+[data-theme="deuteranopia"] .printer-screen,
+[data-theme="tritanopia"] .printer-screen,
+[data-theme="achromatopsia"] .printer-screen {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.14), transparent 28%),
+    linear-gradient(180deg, var(--accessible-screen-panel), var(--accessible-screen));
+  color: var(--accessible-screen-text);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+}
+
+[data-theme="protanopia"] .printer-screen-meta,
+[data-theme="protanopia"] .printer-screen-meta strong,
+[data-theme="protanopia"] #printer-slot-label,
+[data-theme="deuteranopia"] .printer-screen-meta,
+[data-theme="deuteranopia"] .printer-screen-meta strong,
+[data-theme="deuteranopia"] #printer-slot-label,
+[data-theme="tritanopia"] .printer-screen-meta,
+[data-theme="tritanopia"] .printer-screen-meta strong,
+[data-theme="tritanopia"] #printer-slot-label,
+[data-theme="achromatopsia"] .printer-screen-meta,
+[data-theme="achromatopsia"] .printer-screen-meta strong,
+[data-theme="achromatopsia"] #printer-slot-label {
+  color: var(--accessible-screen-text);
+}
+
+[data-theme="protanopia"] .printer-screen-meta span,
+[data-theme="deuteranopia"] .printer-screen-meta span,
+[data-theme="tritanopia"] .printer-screen-meta span,
+[data-theme="achromatopsia"] .printer-screen-meta span {
+  color: var(--accessible-screen-muted);
+}
+
+[data-theme="protanopia"] .printer-screen-preview,
+[data-theme="deuteranopia"] .printer-screen-preview,
+[data-theme="tritanopia"] .printer-screen-preview,
+[data-theme="achromatopsia"] .printer-screen-preview {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+    rgba(0, 0, 0, 0.24);
+  background-size: 16px 16px;
+}
+
+[data-theme="protanopia"] .printer-screen-print,
+[data-theme="deuteranopia"] .printer-screen-print,
+[data-theme="tritanopia"] .printer-screen-print,
+[data-theme="achromatopsia"] .printer-screen-print {
+  background: var(--accessible-action);
+  color: var(--accessible-action-text);
+}
+
+[data-theme="protanopia"] .printer-screen:disabled .printer-screen-print,
+[data-theme="deuteranopia"] .printer-screen:disabled .printer-screen-print,
+[data-theme="tritanopia"] .printer-screen:disabled .printer-screen-print,
+[data-theme="achromatopsia"] .printer-screen:disabled .printer-screen-print {
+  opacity: 1;
+  background: var(--accessible-disabled);
+  color: var(--accessible-disabled-text);
+}
+
+[data-theme="protanopia"] .printer-screen-model,
+[data-theme="deuteranopia"] .printer-screen-model,
+[data-theme="tritanopia"] .printer-screen-model,
+[data-theme="achromatopsia"] .printer-screen-model {
+  background: linear-gradient(180deg, var(--success), var(--accessible-action));
+}
+
+[data-theme="protanopia"] .sd-card,
+[data-theme="protanopia"] .inventory-sd-card,
+[data-theme="protanopia"] .combo-card-shape,
+[data-theme="protanopia"] .assembly-card,
+[data-theme="protanopia"] .adapter-card-preview,
+[data-theme="protanopia"] .printer-converter-card-preview,
+[data-theme="protanopia"] .printer-slot-card,
+[data-theme="protanopia"] .printer-sd-card,
+[data-theme="protanopia"] .drag-sd-card,
+[data-theme="protanopia"] .tray-return-inserted-card,
+[data-theme="protanopia"] .pickup-card::before,
+[data-theme="deuteranopia"] .sd-card,
+[data-theme="deuteranopia"] .inventory-sd-card,
+[data-theme="deuteranopia"] .combo-card-shape,
+[data-theme="deuteranopia"] .assembly-card,
+[data-theme="deuteranopia"] .adapter-card-preview,
+[data-theme="deuteranopia"] .printer-converter-card-preview,
+[data-theme="deuteranopia"] .printer-slot-card,
+[data-theme="deuteranopia"] .printer-sd-card,
+[data-theme="deuteranopia"] .drag-sd-card,
+[data-theme="deuteranopia"] .tray-return-inserted-card,
+[data-theme="deuteranopia"] .pickup-card::before,
+[data-theme="tritanopia"] .sd-card,
+[data-theme="tritanopia"] .inventory-sd-card,
+[data-theme="tritanopia"] .combo-card-shape,
+[data-theme="tritanopia"] .assembly-card,
+[data-theme="tritanopia"] .adapter-card-preview,
+[data-theme="tritanopia"] .printer-converter-card-preview,
+[data-theme="tritanopia"] .printer-slot-card,
+[data-theme="tritanopia"] .printer-sd-card,
+[data-theme="tritanopia"] .drag-sd-card,
+[data-theme="tritanopia"] .tray-return-inserted-card,
+[data-theme="tritanopia"] .pickup-card::before,
+[data-theme="achromatopsia"] .sd-card,
+[data-theme="achromatopsia"] .inventory-sd-card,
+[data-theme="achromatopsia"] .combo-card-shape,
+[data-theme="achromatopsia"] .assembly-card,
+[data-theme="achromatopsia"] .adapter-card-preview,
+[data-theme="achromatopsia"] .printer-converter-card-preview,
+[data-theme="achromatopsia"] .printer-slot-card,
+[data-theme="achromatopsia"] .printer-sd-card,
+[data-theme="achromatopsia"] .drag-sd-card,
+[data-theme="achromatopsia"] .tray-return-inserted-card,
+[data-theme="achromatopsia"] .pickup-card::before {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.14) 0 16%, transparent 16%),
+    linear-gradient(180deg, var(--accessible-card), var(--accessible-card-deep));
+  color: var(--accessible-card-text);
+}
+
+[data-theme="protanopia"] .card-mark,
+[data-theme="deuteranopia"] .card-mark,
+[data-theme="tritanopia"] .card-mark,
+[data-theme="achromatopsia"] .card-mark {
+  color: var(--accessible-card-text);
+}
+
+[data-theme="protanopia"] .card-contacts,
+[data-theme="deuteranopia"] .card-contacts,
+[data-theme="tritanopia"] .card-contacts,
+[data-theme="achromatopsia"] .card-contacts {
+  background:
+    repeating-linear-gradient(
+      90deg,
+      var(--warning) 0 6px,
+      transparent 6px 10px
+    );
+}
+
+[data-theme="protanopia"] .adapter-body::before,
+[data-theme="protanopia"] .printer-converter-body::before,
+[data-theme="protanopia"] .tray-return-reader,
+[data-theme="protanopia"] .combo-adapter-shape,
+[data-theme="protanopia"] .pickup-adapter::before,
+[data-theme="deuteranopia"] .adapter-body::before,
+[data-theme="deuteranopia"] .printer-converter-body::before,
+[data-theme="deuteranopia"] .tray-return-reader,
+[data-theme="deuteranopia"] .combo-adapter-shape,
+[data-theme="deuteranopia"] .pickup-adapter::before,
+[data-theme="tritanopia"] .adapter-body::before,
+[data-theme="tritanopia"] .printer-converter-body::before,
+[data-theme="tritanopia"] .tray-return-reader,
+[data-theme="tritanopia"] .combo-adapter-shape,
+[data-theme="tritanopia"] .pickup-adapter::before,
+[data-theme="achromatopsia"] .adapter-body::before,
+[data-theme="achromatopsia"] .printer-converter-body::before,
+[data-theme="achromatopsia"] .tray-return-reader,
+[data-theme="achromatopsia"] .combo-adapter-shape,
+[data-theme="achromatopsia"] .pickup-adapter::before {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.34), transparent 18%),
+    linear-gradient(180deg, var(--accessible-adapter), var(--accessible-fixture-mid));
+  color: var(--text);
+}
+
+[data-theme="protanopia"] .adapter-usb-plug,
+[data-theme="protanopia"] .combo-adapter-shape::after,
+[data-theme="protanopia"] .pickup-adapter::after,
+[data-theme="deuteranopia"] .adapter-usb-plug,
+[data-theme="deuteranopia"] .combo-adapter-shape::after,
+[data-theme="deuteranopia"] .pickup-adapter::after,
+[data-theme="tritanopia"] .adapter-usb-plug,
+[data-theme="tritanopia"] .combo-adapter-shape::after,
+[data-theme="tritanopia"] .pickup-adapter::after,
+[data-theme="achromatopsia"] .adapter-usb-plug,
+[data-theme="achromatopsia"] .combo-adapter-shape::after,
+[data-theme="achromatopsia"] .pickup-adapter::after {
+  background: linear-gradient(180deg, var(--accessible-fixture-mid), var(--accessible-adapter-edge));
+}
+
+[data-theme="protanopia"] .adapter-shell-label,
+[data-theme="protanopia"] .pickup-subtitle,
+[data-theme="protanopia"] .assembly-hint,
+[data-theme="protanopia"] .transfer-panel-copy,
+[data-theme="deuteranopia"] .adapter-shell-label,
+[data-theme="deuteranopia"] .pickup-subtitle,
+[data-theme="deuteranopia"] .assembly-hint,
+[data-theme="deuteranopia"] .transfer-panel-copy,
+[data-theme="tritanopia"] .adapter-shell-label,
+[data-theme="tritanopia"] .pickup-subtitle,
+[data-theme="tritanopia"] .assembly-hint,
+[data-theme="tritanopia"] .transfer-panel-copy,
+[data-theme="achromatopsia"] .adapter-shell-label,
+[data-theme="achromatopsia"] .pickup-subtitle,
+[data-theme="achromatopsia"] .assembly-hint,
+[data-theme="achromatopsia"] .transfer-panel-copy {
+  color: var(--text);
+}
+
+[data-theme="protanopia"] .bench-dock,
+[data-theme="protanopia"] .adapter-slot,
+[data-theme="protanopia"] .tray-return-slot,
+[data-theme="protanopia"] .printer-kit-dock,
+[data-theme="protanopia"] .printer-card-slot,
+[data-theme="protanopia"] .printer-converter-slot,
+[data-theme="deuteranopia"] .bench-dock,
+[data-theme="deuteranopia"] .adapter-slot,
+[data-theme="deuteranopia"] .tray-return-slot,
+[data-theme="deuteranopia"] .printer-kit-dock,
+[data-theme="deuteranopia"] .printer-card-slot,
+[data-theme="deuteranopia"] .printer-converter-slot,
+[data-theme="tritanopia"] .bench-dock,
+[data-theme="tritanopia"] .adapter-slot,
+[data-theme="tritanopia"] .tray-return-slot,
+[data-theme="tritanopia"] .printer-kit-dock,
+[data-theme="tritanopia"] .printer-card-slot,
+[data-theme="tritanopia"] .printer-converter-slot,
+[data-theme="achromatopsia"] .bench-dock,
+[data-theme="achromatopsia"] .adapter-slot,
+[data-theme="achromatopsia"] .tray-return-slot,
+[data-theme="achromatopsia"] .printer-kit-dock,
+[data-theme="achromatopsia"] .printer-card-slot,
+[data-theme="achromatopsia"] .printer-converter-slot {
+  background: var(--accessible-fixture);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+[data-theme="high-contrast"] *,
+[data-theme="high-contrast"] *::before,
+[data-theme="high-contrast"] *::after {
+  box-shadow: none !important;
+  text-shadow: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+}
+
+[data-theme="high-contrast"] body,
+[data-theme="high-contrast"] .scene,
+[data-theme="high-contrast"] .selector-scene,
+[data-theme="high-contrast"] .door-scene,
+[data-theme="high-contrast"] .room-scene,
+[data-theme="high-contrast"] .workstation-scene,
+[data-theme="high-contrast"] .tray-scene,
+[data-theme="high-contrast"] .printer-scene,
+[data-theme="high-contrast"] .room-floor,
+[data-theme="high-contrast"] .completion-popup {
+  background: #ffffff !important;
+  background-image: none !important;
+  color: #000000 !important;
+}
+
+[data-theme="high-contrast"] .tutorial-panel,
+[data-theme="high-contrast"] .selector-panel,
+[data-theme="high-contrast"] .title-block,
+[data-theme="high-contrast"] .objective-panel,
+[data-theme="high-contrast"] .inventory-panel,
+[data-theme="high-contrast"] .dialogue-frame,
+[data-theme="high-contrast"] .settings-card,
+[data-theme="high-contrast"] .manual-hint-panel,
+[data-theme="high-contrast"] .scene-title,
+[data-theme="high-contrast"] .monitor-shell,
+[data-theme="high-contrast"] .bambu-ui,
+[data-theme="high-contrast"] .ui-card,
+[data-theme="high-contrast"] .tray-board,
+[data-theme="high-contrast"] .tray-items,
+[data-theme="high-contrast"] .assembly-zone,
+[data-theme="high-contrast"] .tray-return-zone,
+[data-theme="high-contrast"] .printer-unit,
+[data-theme="high-contrast"] .printer-transfer-panel,
+[data-theme="high-contrast"] .printer-screen,
+[data-theme="high-contrast"] .inventory-item,
+[data-theme="high-contrast"] .pickup-item,
+[data-theme="high-contrast"] .model-preview,
+[data-theme="high-contrast"] .model-inspector,
+[data-theme="high-contrast"] .door-reader,
+[data-theme="high-contrast"] .hotspot,
+[data-theme="high-contrast"] .theme-choice,
+[data-theme="high-contrast"] .settings-button,
+[data-theme="high-contrast"] .hint-button,
+[data-theme="high-contrast"] .help-button,
+[data-theme="high-contrast"] .return-button,
+[data-theme="high-contrast"] .slice-button,
+[data-theme="high-contrast"] .printer-screen-print,
+[data-theme="high-contrast"] .completion-button,
+[data-theme="high-contrast"] .post-it-hint {
+  background: #ffffff !important;
+  background-image: none !important;
+  border: 3px solid #000000 !important;
+  color: #000000 !important;
+}
+
+[data-theme="high-contrast"] button:hover,
+[data-theme="high-contrast"] button:focus-visible,
+[data-theme="high-contrast"] .theme-choice.active,
+[data-theme="high-contrast"] .is-next-target,
+[data-theme="high-contrast"] .hotspot:hover,
+[data-theme="high-contrast"] .slice-button:hover,
+[data-theme="high-contrast"] .printer-screen-print:hover {
+  background: #000000 !important;
+  color: #ffffff !important;
+  outline: 4px solid #ffff00 !important;
+  outline-offset: 3px;
+}
+
+[data-theme="high-contrast"] .success-pop,
+[data-theme="high-contrast"] .state-loaded,
+[data-theme="high-contrast"] .printer-card-slot.loaded {
+  border-color: #008000 !important;
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+[data-theme="high-contrast"] .error-pop,
+[data-theme="high-contrast"] .drop-rejected {
+  border-color: #ff0000 !important;
+  background:
+    repeating-linear-gradient(45deg, #ffffff 0 8px, #ffdede 8px 16px) !important;
+  color: #000000 !important;
+}
+
+[data-theme="high-contrast"] .post-it-hint,
+[data-theme="high-contrast"] .support-preview-label {
+  border-color: #000000 !important;
+  background: #ffff00 !important;
+  color: #000000 !important;
+}
+
+[data-theme="high-contrast"] .printer-window,
+[data-theme="high-contrast"] .bank-printer::before,
+[data-theme="high-contrast"] .side-printer-face::before,
+[data-theme="high-contrast"] .printer-screen {
+  background: #000000 !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  border-color: #000000 !important;
+}
+
+[data-theme="high-contrast"] .printer-screen-meta,
+[data-theme="high-contrast"] .printer-screen-meta strong,
+[data-theme="high-contrast"] .printer-screen-meta span {
+  color: #ffffff !important;
+}
+
+[data-theme="high-contrast"] .printer-screen-preview {
+  background:
+    linear-gradient(#444444 1px, transparent 1px),
+    linear-gradient(90deg, #444444 1px, transparent 1px),
+    #000000 !important;
+  background-size: 16px 16px !important;
+  border: 2px solid #ffffff !important;
+}
+
+[data-theme="high-contrast"] .printer-screen-model {
+  background: #00ffff !important;
+  background-image: none !important;
+}
+
+[data-theme="high-contrast"] .printer-screen-print,
+[data-theme="high-contrast"] .printer-screen:disabled .printer-screen-print {
+  opacity: 1 !important;
+  background: #ffffff !important;
+  background-image: none !important;
+  color: #000000 !important;
+  border: 2px solid #ffffff !important;
+}
+
+[data-theme="high-contrast"] #printer-slot-label,
+[data-theme="high-contrast"] .card-mark {
+  color: #ffffff !important;
+}
+
+[data-theme="high-contrast"] .sd-card,
+[data-theme="high-contrast"] .printer-sd-card,
+[data-theme="high-contrast"] .printer-slot-card,
+[data-theme="high-contrast"] .adapter-card,
+[data-theme="high-contrast"] .reader-body,
+[data-theme="high-contrast"] .adapter-body,
+[data-theme="high-contrast"] .bench-kit-preview {
+  background: #000000 !important;
+  background-image: none !important;
+  border: 3px solid #000000 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="high-contrast"] .reader-plug,
+[data-theme="high-contrast"] .adapter-plug,
+[data-theme="high-contrast"] .bench-dock,
+[data-theme="high-contrast"] .printer-card-slot,
+[data-theme="high-contrast"] .tray-return-slot {
+  background: #ffffff !important;
+  background-image: none !important;
+  border: 3px solid #000000 !important;
+  color: #000000 !important;
+}
+
+[data-theme="high-contrast"] .printer-body,
+[data-theme="high-contrast"] .printer-top,
+[data-theme="high-contrast"] .printer-door,
+[data-theme="high-contrast"] .printer-base,
+[data-theme="high-contrast"] .laptop-base,
+[data-theme="high-contrast"] .laptop-screen,
+[data-theme="high-contrast"] .door-panel {
+  background: #ffffff !important;
+  background-image: none !important;
+  border-color: #000000 !important;
+}
+
+[data-theme="high-contrast"] .chapter-label,
+[data-theme="high-contrast"] .settings-kicker,
+[data-theme="high-contrast"] .scene-kicker,
+[data-theme="high-contrast"] .manual-hint-kicker,
+[data-theme="high-contrast"] .model-inspector-label,
+[data-theme="high-contrast"] .model-zoom-value {
+  color: #000000;
+}
+
+[data-theme="protanopia"] .selector-scene,
+[data-theme="protanopia"] .safety-scene,
+[data-theme="deuteranopia"] .selector-scene,
+[data-theme="deuteranopia"] .safety-scene,
+[data-theme="tritanopia"] .selector-scene,
+[data-theme="tritanopia"] .safety-scene,
+[data-theme="achromatopsia"] .selector-scene,
+[data-theme="achromatopsia"] .safety-scene {
+  background:
+    linear-gradient(rgba(80, 100, 116, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(80, 100, 116, 0.08) 1px, transparent 1px),
+    linear-gradient(180deg, var(--wall) 0%, var(--bg) 100%);
+  background-size: 42px 42px, 42px 42px, auto;
+  color: var(--text);
+}
+
+[data-theme="protanopia"] .level-card,
+[data-theme="protanopia"] .selector-panel,
+[data-theme="protanopia"] .safety-panel,
+[data-theme="protanopia"] .safety-choice,
+[data-theme="protanopia"] .safety-feedback,
+[data-theme="protanopia"] .safety-complete-card,
+[data-theme="deuteranopia"] .level-card,
+[data-theme="deuteranopia"] .selector-panel,
+[data-theme="deuteranopia"] .safety-panel,
+[data-theme="deuteranopia"] .safety-choice,
+[data-theme="deuteranopia"] .safety-feedback,
+[data-theme="deuteranopia"] .safety-complete-card,
+[data-theme="tritanopia"] .level-card,
+[data-theme="tritanopia"] .selector-panel,
+[data-theme="tritanopia"] .safety-panel,
+[data-theme="tritanopia"] .safety-choice,
+[data-theme="tritanopia"] .safety-feedback,
+[data-theme="tritanopia"] .safety-complete-card,
+[data-theme="achromatopsia"] .level-card,
+[data-theme="achromatopsia"] .selector-panel,
+[data-theme="achromatopsia"] .safety-panel,
+[data-theme="achromatopsia"] .safety-choice,
+[data-theme="achromatopsia"] .safety-feedback,
+[data-theme="achromatopsia"] .safety-complete-card {
+  background: var(--panel-strong);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+[data-theme="protanopia"] .safety-progress,
+[data-theme="protanopia"] .safety-choice:hover:not(:disabled),
+[data-theme="protanopia"] .safety-choice[aria-pressed="true"],
+[data-theme="deuteranopia"] .safety-progress,
+[data-theme="deuteranopia"] .safety-choice:hover:not(:disabled),
+[data-theme="deuteranopia"] .safety-choice[aria-pressed="true"],
+[data-theme="tritanopia"] .safety-progress,
+[data-theme="tritanopia"] .safety-choice:hover:not(:disabled),
+[data-theme="tritanopia"] .safety-choice[aria-pressed="true"],
+[data-theme="achromatopsia"] .safety-progress,
+[data-theme="achromatopsia"] .safety-choice:hover:not(:disabled),
+[data-theme="achromatopsia"] .safety-choice[aria-pressed="true"] {
+  background: var(--cyan-soft);
+  border-color: var(--cyan);
+  color: var(--text);
+}
+
+[data-theme="protanopia"] .safety-feedback.correct,
+[data-theme="protanopia"] .safety-choice.correct,
+[data-theme="protanopia"] .safety-complete-card,
+[data-theme="deuteranopia"] .safety-feedback.correct,
+[data-theme="deuteranopia"] .safety-choice.correct,
+[data-theme="deuteranopia"] .safety-complete-card,
+[data-theme="tritanopia"] .safety-feedback.correct,
+[data-theme="tritanopia"] .safety-choice.correct,
+[data-theme="tritanopia"] .safety-complete-card,
+[data-theme="achromatopsia"] .safety-feedback.correct,
+[data-theme="achromatopsia"] .safety-choice.correct,
+[data-theme="achromatopsia"] .safety-complete-card {
+  background: var(--success-soft);
+  border-color: var(--success);
+}
+
+[data-theme="protanopia"] .safety-feedback.incorrect,
+[data-theme="protanopia"] .safety-choice.incorrect,
+[data-theme="deuteranopia"] .safety-feedback.incorrect,
+[data-theme="deuteranopia"] .safety-choice.incorrect,
+[data-theme="tritanopia"] .safety-feedback.incorrect,
+[data-theme="tritanopia"] .safety-choice.incorrect,
+[data-theme="achromatopsia"] .safety-feedback.incorrect,
+[data-theme="achromatopsia"] .safety-choice.incorrect {
+  background:
+    repeating-linear-gradient(45deg, var(--error-soft) 0 8px, transparent 8px 16px),
+    var(--panel-strong);
+  border-color: var(--error);
+}
+
+[data-theme="high-contrast"] .selector-scene,
+[data-theme="high-contrast"] .safety-scene {
+  background: #ffffff !important;
+  background-image: none !important;
+  color: #000000 !important;
+}
+
+[data-theme="high-contrast"] .level-card,
+[data-theme="high-contrast"] .selector-panel,
+[data-theme="high-contrast"] .safety-panel,
+[data-theme="high-contrast"] .safety-choice,
+[data-theme="high-contrast"] .safety-feedback,
+[data-theme="high-contrast"] .safety-complete-card,
+[data-theme="high-contrast"] .safety-progress,
+[data-theme="high-contrast"] .safety-submit,
+[data-theme="high-contrast"] .safety-continue,
+[data-theme="high-contrast"] .safety-return {
+  background: #ffffff !important;
+  background-image: none !important;
+  border: 3px solid #000000 !important;
+  color: #000000 !important;
+}
+
+[data-theme="high-contrast"] .safety-choice:hover,
+[data-theme="high-contrast"] .safety-choice[aria-pressed="true"],
+[data-theme="high-contrast"] .safety-submit:hover,
+[data-theme="high-contrast"] .safety-continue:hover,
+[data-theme="high-contrast"] .safety-return:hover {
+  background: #000000 !important;
+  color: #ffffff !important;
+  outline: 4px solid #ffff00 !important;
+  outline-offset: 3px;
+}
+
+[data-theme="high-contrast"] .safety-feedback.correct,
+[data-theme="high-contrast"] .safety-choice.correct,
+[data-theme="high-contrast"] .safety-complete-card {
+  border-color: #008000 !important;
+}
+
+[data-theme="high-contrast"] .safety-feedback.incorrect,
+[data-theme="high-contrast"] .safety-choice.incorrect {
+  border-color: #ff0000 !important;
+  background:
+    repeating-linear-gradient(45deg, #ffffff 0 8px, #ffdede 8px 16px) !important;
+  color: #000000 !important;
+}

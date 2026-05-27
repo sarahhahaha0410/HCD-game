@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Level 1 Simulation | 3D Printing Workshop Training</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="accessibility-themes.css">
+</head>
+<body>
+  <main class="game-shell">
+    <section class="overlay top-bar" aria-label="Game interface">
+      <div class="hud-cluster">
+        <div class="title-block">
+          <p class="chapter-label">Workshop Quest</p>
+          <h1>3D Printing Room</h1>
+        </div>
+
+        <div class="objective-panel">
+          <p class="objective-label">Current Status</p>
+          <p id="objective-text" class="objective-text">
+            Read the workflow, then start the simulation.
+          </p>
+        </div>
+      </div>
+
+      <div class="inventory-panel">
+        <p class="inventory-label">Inventory</p>
+        <div id="inventory" class="inventory" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <div class="overlay utility-cluster" aria-label="Training utilities">
+      <button id="hint-button" class="utility-button hint-button hidden" type="button" aria-label="Show a hint">
+        Hint (2)
+      </button>
+      <button id="settings-button" class="utility-button settings-button" type="button" aria-expanded="false" aria-controls="settings-panel">
+        Settings
+      </button>
+      <button id="help-button" class="utility-button help-button hidden" type="button" aria-label="View instructions">
+      Instructions
+      </button>
+
+      <button id="return-button" class="utility-button return-button hidden" type="button" aria-label="Return to workshop">
+        Return
+      <span aria-hidden="true">↩</span>
+    </button>
+
+    </div>
+
+    <section id="settings-panel" class="overlay settings-panel hidden" aria-label="Display settings">
+      <div class="settings-card">
+        <div>
+          <p class="settings-kicker">Display</p>
+          <h2>Colour Scheme</h2>
+        </div>
+        <div class="theme-choice-grid" role="group" aria-label="Colour scheme choices">
+          <button class="theme-choice" type="button" data-theme-choice="default">Default</button>
+          <button class="theme-choice" type="button" data-theme-choice="protanopia">Protanopia</button>
+          <button class="theme-choice" type="button" data-theme-choice="deuteranopia">Deuteranopia</button>
+          <button class="theme-choice" type="button" data-theme-choice="tritanopia">Tritanopia</button>
+          <button class="theme-choice" type="button" data-theme-choice="achromatopsia">Achromatopsia</button>
+          <button class="theme-choice" type="button" data-theme-choice="high-contrast">High Contrast</button>
+          <button class="theme-choice" type="button" data-theme-choice="night">Night</button>
+        </div>
+      </div>
+    </section>
+
+    <div id="post-it-hint" class="post-it-hint hidden" aria-live="polite"></div>
+    <section id="manual-hint-panel" class="manual-hint-panel hidden" aria-label="Detailed hint" aria-live="polite">
+      <p class="manual-hint-kicker">Manual Hint</p>
+      <h2 id="manual-hint-title">Next Step</h2>
+      <p id="manual-hint-text"></p>
+    </section>
+    <div id="gesture-hint" class="gesture-hint hidden" aria-hidden="true">
+      <span class="gesture-trail"></span>
+      <span class="gesture-hand"></span>
+    </div>
+
+    <section id="scene-tutorial" class="scene active" aria-label="Tutorial introduction">
+      <div class="scene-atmosphere"></div>
+      <div class="scene-title">
+        <p class="scene-kicker">Tutorial</p>
+        <h2>How This Training Works</h2>
+      </div>
+
+      <div class="tutorial-scene">
+        <div class="tutorial-panel">
+          <div class="tutorial-copy">
+            <p class="tutorial-kicker">Before You Start</p>
+            <h3>Follow the print workflow</h3>
+            <p>The training follows the real lab order. Use the Hint button if you lose the next step.</p>
+            <ol class="mission-sequence">
+              <li>Enter the room with your ID card.</li>
+              <li>Slice the model at the bench area.</li>
+              <li>Collect the SD card and USB reader.</li>
+              <li>Insert the SD card into the reader.</li>
+              <li>Export the sliced file.</li>
+              <li>Undock the reader, separate the SD card, insert it into the printer, start the print, then return the adapter.</li>
+            </ol>
+            <button id="tutorial-start" class="tutorial-start" type="button">Start Simulation</button>
+          </div>
+
+          <div class="tutorial-grid">
+            <article class="tutorial-card">
+              <div class="tutorial-visual tutorial-hotspot-visual">
+                <span class="tutorial-hotspot-ring"></span>
+                <span class="tutorial-pill">Hotspot</span>
+              </div>
+              <strong>Click hotspots and tray items. Drag inventory items only when the prompt says drag.</strong>
+            </article>
+            <article class="tutorial-card">
+              <div class="tutorial-visual tutorial-inventory-visual">
+                <span class="combo-adapter-shape"></span>
+                <span class="combo-card-shape"></span>
+              </div>
+              <strong>Drag the correct inventory item to slots, docks, and readers</strong>
+            </article>
+            <article class="tutorial-card">
+              <div class="tutorial-visual tutorial-guide-visual">
+                <span class="tutorial-guide-bar"></span>
+                <span class="tutorial-guide-bar short"></span>
+              </div>
+              <strong>Watch for green success flashes, red error flashes, and post-it hints.</strong>
+            </article>
+            <article class="tutorial-card">
+              <div class="tutorial-visual tutorial-esc-visual">
+                <span class="tutorial-keycap">Esc</span>
+              </div>
+              <strong>Press Esc to return to the main workshop room from close-up scenes. Progress is kept.</strong>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="scene-door" class="scene" aria-label="Workshop entrance">
+      <div class="scene-atmosphere"></div>
+      <div class="scene-title">
+        <p class="scene-kicker">Scene 1</p>
+        <h2>Workshop Entrance</h2>
+      </div>
+
+      <div class="door-scene">
+        <div class="ceiling-lights">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="entrance-wall">
+          <div class="notice-board">
+            <span>3D Print Lab</span>
+            <span>Authorized Access Only</span>
+          </div>
+
+          <div class="workshop-door">
+            <div class="door-frame">
+              <div class="door-panel">
+                <div class="door-window"></div>
+                <div class="door-plaque">Training Room</div>
+                <div class="door-handle"></div>
+                <div id="door-reader" class="door-reader" data-drop-target="door-reader" aria-label="Door card reader">
+                  <span class="reader-light"></span>
+                  <span>Swipe Card</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="entry-floor-glow"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="scene-room" class="scene" aria-label="3D printing room">
+      <div class="scene-atmosphere"></div>
+      <div class="scene-title">
+        <p class="scene-kicker">Scene 2</p>
+        <h2>3D Printing Room</h2>
+      </div>
+
+      <div class="room-scene">
+        <div class="room-floor"></div>
+        <div class="top-printer-bank">
+          <span class="bank-printer"></span>
+          <span class="bank-printer"></span>
+          <span class="bank-printer"></span>
+          <span class="bank-printer"></span>
+          <span class="bank-printer"></span>
+          <span class="bank-printer"></span>
+        </div>
+        <div class="room-back-strip"></div>
+        <div class="room-grid"></div>
+        <div class="room-aisle"></div>
+
+        <div class="back-printer-bank">
+          <span class="bank-printer"></span>
+          <span class="bank-printer"></span>
+          <span class="bank-printer"></span>
+          <span class="bank-printer"></span>
+          <span class="bank-printer"></span>
+          <span class="bank-printer"></span>
+        </div>
+
+        <div class="bench-column">
+          <div class="bench-block bench-one">
+            <span class="bench-shelf"></span>
+            <span class="bench-wheel wheel-left"></span>
+            <span class="bench-wheel wheel-right"></span>
+          </div>
+          <div class="bench-block bench-two">
+            <span class="bench-shelf"></span>
+            <span class="bench-wheel wheel-left"></span>
+            <span class="bench-wheel wheel-right"></span>
+          </div>
+        </div>
+
+        <div class="right-zone">
+          <div class="side-printer-block side-printer-top">
+            <span class="side-printer-face"></span>
+          </div>
+          <div class="side-tray-block">
+            <span class="tray-card"></span>
+            <span class="tray-slot"></span>
+          </div>
+          <div class="side-printer-block side-printer-bottom">
+            <span class="side-printer-face"></span>
+          </div>
+        </div>
+
+        <div class="room-bin"></div>
+
+        <button class="hotspot" data-hotspot="printers" style="top: 36%; left: 42%;">
+          <span>3D Printers</span>
+        </button>
+        <button class="hotspot" data-hotspot="bench" style="top: 60%; left: 22%;">
+          <span>Bench Area</span>
+        </button>
+        <button class="hotspot" data-hotspot="tray" style="top: 55%; left: 83%;">
+          <span>SD Card Tray</span>
+        </button>
+        <button class="hotspot" data-hotspot="bin" style="top: 28%; left: 86%;">
+          <span>Waste Bin</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="scene-workstation" class="scene" aria-label="Bambu Lab workstation">
+      <div class="scene-atmosphere"></div>
+      <div class="scene-title">
+        <p class="scene-kicker">Scene 3</p>
+        <h2>Bambu Lab Workstation</h2>
+      </div>
+
+      <div class="workstation-scene">
+        <div class="workstation-rig">
+          <div class="computer-stage">
+            <div class="monitor-shell">
+              <div class="bambu-ui">
+                <header class="ui-header">
+                  <div class="ui-header-copy">
+                    <p class="ui-label">Bambu Lab</p>
+                    <h3>Model Preparation</h3>
+                  </div>
+                  <div class="ui-status">Ready to slice</div>
+                </header>
+
+                <div class="ui-main">
+                  <div class="model-preview">
+                    <div class="preview-grid"></div>
+                    <div id="model-inspector" class="model-inspector" role="img" tabindex="0" aria-label="Drag to rotate Asu's Desk Tidy STL model">
+                      <canvas id="model-canvas" class="model-canvas" width="720" height="460"></canvas>
+                      <span class="model-inspector-label">Smooth STL preview // drag 360 degrees</span>
+                      <div class="model-zoom-controls" aria-label="Model zoom controls">
+                        <button id="model-zoom-out" class="model-zoom-button" type="button" data-model-zoom="out" aria-label="Zoom model out">-</button>
+                        <span id="model-zoom-value" class="model-zoom-value">100%</span>
+                        <button id="model-zoom-in" class="model-zoom-button" type="button" data-model-zoom="in" aria-label="Zoom model in">+</button>
+                      </div>
+                      <span id="support-preview-label" class="support-preview-label hidden">Bambu support toolpath preview</span>
+                    </div>
+                  </div>
+
+                  <aside class="ui-sidebar">
+                    <div class="ui-card">
+                      <p class="ui-card-label">Material</p>
+                      <strong>PLA</strong>
+                    </div>
+                    <div class="ui-card">
+                      <p class="ui-card-label">Layer Height</p>
+                      <strong>0.20 mm</strong>
+                    </div>
+                    <div class="ui-card">
+                      <p class="ui-card-label">Plate</p>
+                      <strong>Textured PEI</strong>
+                    </div>
+                    <div class="ui-card practical-check">
+                      <p class="ui-card-label">Print Time</p>
+                      <strong>4 hr 35 min</strong>
+                    </div>
+                    <div class="ui-card practical-check">
+                      <p class="ui-card-label">Dimensions</p>
+                      <strong>81 x 123 x 117 mm</strong>
+                    </div>
+                    <div class="ui-card practical-check warning">
+                      <p class="ui-card-label">Supports</p>
+                      <strong>Overhangs need support</strong>
+                    </div>
+                  </aside>
+                </div>
+
+                <footer class="ui-footer">
+                  <p id="workstation-status" class="slice-status">Your laptop is set up on the bench. Slice the model before transferring the file.</p>
+                  <button id="workstation-action" class="slice-button" type="button">Slice</button>
+                </footer>
+              </div>
+            </div>
+
+            <div class="laptop-base">
+              <div id="bench-dock" class="bench-dock" data-drop-target="bench-dock" aria-label="Laptop base side dock">
+                <span id="bench-dock-label">USB Dock</span>
+              </div>
+              <div id="bench-kit-preview" class="bench-kit-preview hidden" data-drag-item="docked-transfer-kit" aria-label="Docked loaded USB reader">
+                <span class="combo-adapter-shape"></span>
+                <span class="combo-card-shape"></span>
+              </div>
+              <span class="keyboard-panel"></span>
+              <span class="trackpad-panel"></span>
+            </div>
+          </div>
+          <div class="desk-ledge"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="scene-tray" class="scene" aria-label="SD card tray close-up">
+      <div class="scene-atmosphere"></div>
+      <div class="scene-title">
+        <p class="scene-kicker">Scene 4</p>
+        <h2>Transfer Tray</h2>
+      </div>
+
+      <div class="tray-scene">
+        <div class="tray-board">
+          <div class="tray-items">
+            <button id="pickup-sd-card" class="pickup-item pickup-card" type="button">
+              <span class="pickup-title">SD Card</span>
+              <span class="pickup-subtitle">Click to pick up</span>
+            </button>
+
+            <button id="pickup-adapter" class="pickup-item pickup-adapter" type="button">
+              <span class="pickup-title">Converter</span>
+              <span class="pickup-subtitle">Click to pick up</span>
+            </button>
+          </div>
+
+          <div id="assembly-zone" class="assembly-zone">
+            <div class="assembly-header">
+              <p class="assembly-label">Assembly Surface</p>
+              <p id="assembly-hint" class="assembly-hint">Click both tray items to pick them up.</p>
+            </div>
+
+            <div class="assembly-area">
+              <div class="assembly-card-lane">
+                <div id="assembly-card" class="assembly-card hidden" data-drag-item="sd-card" aria-label="SD card">
+                  <span class="card-contacts"></span>
+                  <span class="card-mark">SD</span>
+                </div>
+              </div>
+
+              <div id="assembly-adapter" class="assembly-adapter hidden" data-drag-item="assembled-transfer-kit" aria-label="Assembled SD card reader">
+                <div class="adapter-body">
+                  <span class="adapter-usb-plug"></span>
+                  <span class="adapter-shell-label">USB Reader</span>
+                  <div id="adapter-slot" class="adapter-slot" data-drop-target="adapter-slot">
+                    <span>Insert SD card</span>
+                  </div>
+                  <div id="adapter-card-preview" class="adapter-card-preview hidden" aria-hidden="true">
+                    <span class="card-contacts"></span>
+                    <span class="card-mark">SD</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="tray-return-zone" class="tray-return-zone hidden">
+            <div class="assembly-header">
+              <p class="assembly-label">Return Tray</p>
+              <p id="tray-return-hint" class="assembly-hint">
+                Put the USB adapter back where it belongs.
+              </p>
+            </div>
+
+            <div id="tray-return-slot" class="tray-return-slot" data-drop-target="tray-return-slot">
+              <span id="tray-return-label">Return USB Adapter</span>
+              <div id="tray-return-preview" class="tray-return-preview hidden" aria-hidden="true">
+                <div class="tray-return-reader">
+                  <span class="adapter-usb-plug"></span>
+                </div>
+                <p>The USB adapter is back in the tray.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="scene-printer" class="scene" aria-label="Bambu X1 close-up">
+      <div class="scene-atmosphere"></div>
+      <div class="scene-title">
+        <p class="scene-kicker">Scene 5</p>
+        <h2>Bambu X1 Printer</h2>
+      </div>
+
+      <div class="printer-scene">
+        <div class="printer-closeup">
+          <div class="printer-unit">
+            <div class="printer-roof"></div>
+            <div class="printer-window"></div>
+            <div class="printer-bed"></div>
+            <div class="printer-side-column"></div>
+
+            <div class="printer-control-cluster">
+              <button id="printer-screen" class="printer-screen" type="button">
+                <span class="printer-screen-preview">
+                  <span class="printer-screen-model"></span>
+                </span>
+                <span class="printer-screen-meta">
+                  <strong>Sliced Model</strong>
+                  <span>PLA / 0.20 mm</span>
+                </span>
+                <span class="printer-screen-print">Print</span>
+              </button>
+
+              <div class="printer-slot-panel">
+                <div id="printer-card-slot" class="printer-card-slot" data-drop-target="printer-card-slot">
+                  <span id="printer-slot-label">Insert SD card</span>
+                  <div id="printer-slot-card" class="printer-slot-card hidden" data-drag-item="printer-sd-card" aria-label="SD card in printer">
+                    <span class="card-contacts"></span>
+                    <span class="card-mark">SD</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="printer-transfer-panel">
+            <div class="transfer-copy">
+              <p class="ui-card-label">Transfer Kit</p>
+              <p id="printer-transfer-copy" class="transfer-panel-copy">
+                Bring the converter to the printer, then load the SD card.
+              </p>
+            </div>
+
+            <div id="printer-kit-dock" class="printer-kit-dock" data-drop-target="printer-kit-dock">
+              <span id="printer-kit-label">Place converter here</span>
+            </div>
+
+            <div id="printer-converter-stand" class="printer-converter-stand hidden">
+              <div id="printer-loose-card" class="printer-sd-card hidden" data-drag-item="printer-sd-card" aria-label="SD card">
+                <span class="card-contacts"></span>
+                <span class="card-mark">SD</span>
+              </div>
+
+              <div class="printer-converter-body">
+                <span class="adapter-usb-plug"></span>
+                <span class="adapter-shell-label">USB Reader</span>
+                <div id="printer-converter-slot" class="printer-converter-slot" data-drop-target="printer-converter-slot">
+                  <span id="printer-converter-label">Reader slot</span>
+                </div>
+                <div id="printer-converter-card-preview" class="printer-converter-card-preview hidden" aria-hidden="true">
+                  <span class="card-contacts"></span>
+                  <span class="card-mark">SD</span>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="overlay dialogue-box" aria-label="Guide dialogue">
+      <div id="dialogue-frame" class="dialogue-frame" aria-label="Dialogue box">
+        <p id="dialogue-speaker" class="dialogue-speaker">Guide</p>
+        <p id="dialogue-text" class="dialogue-text">
+          Swipe your ID card over the reader beside the handle to enter the workshop.
+        </p>
+        <p id="dialogue-prompt" class="dialogue-prompt hidden">Click anywhere to continue</p>
+      </div>
+    </section>
+
+    <section id="completion-popup" class="completion-popup hidden" aria-label="Tutorial completion">
+      <div class="completion-card">
+        <p class="completion-kicker">Level 1 Complete</p>
+        <h2>Simulation Complete!</h2>
+        <p class="completion-message">Print started and the USB adapter has been returned. Level 2 Safety Check is now unlocked.</p>
+        <button id="completion-continue" class="completion-button" type="button">Choose Next Level</button>
+      </div>
+    </section>
+
+    <div id="drag-ghost" class="drag-ghost hidden" aria-hidden="true"></div>
+  </main>
+
+  <script src="assets/models/asu-desk-tidy-mesh.js"></script>
+  <script src="assets/models/asu-desk-tidy-support-preview.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

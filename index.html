@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Level Select | 3D Printing Workshop Training</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="accessibility-themes.css">
+</head>
+<body>
+  <main class="game-shell level-select-page">
+    <section class="overlay top-bar" aria-label="Training interface">
+      <div class="hud-cluster">
+        <div class="title-block">
+          <p class="chapter-label">Workshop Quest</p>
+          <h1>3D Printing Training</h1>
+        </div>
+
+        <div class="objective-panel">
+          <p class="objective-label">Current Status</p>
+          <p id="level-select-status" class="objective-text" aria-live="polite">
+            Choose a level to continue training.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="overlay utility-cluster" aria-label="Training utilities">
+      <button id="settings-button" class="utility-button settings-button" type="button" aria-expanded="false" aria-controls="settings-panel">
+        Settings
+      </button>
+    </div>
+
+    <section id="settings-panel" class="overlay settings-panel hidden" aria-label="Display settings">
+      <div class="settings-card">
+        <div>
+          <p class="settings-kicker">Display</p>
+          <h2>Colour Scheme</h2>
+        </div>
+        <div class="theme-choice-grid" role="group" aria-label="Colour scheme choices">
+          <button class="theme-choice" type="button" data-theme-choice="default">Default</button>
+          <button class="theme-choice" type="button" data-theme-choice="protanopia">Protanopia</button>
+          <button class="theme-choice" type="button" data-theme-choice="deuteranopia">Deuteranopia</button>
+          <button class="theme-choice" type="button" data-theme-choice="tritanopia">Tritanopia</button>
+          <button class="theme-choice" type="button" data-theme-choice="achromatopsia">Achromatopsia</button>
+          <button class="theme-choice" type="button" data-theme-choice="high-contrast">High Contrast</button>
+          <button class="theme-choice" type="button" data-theme-choice="night">Night</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene active" aria-label="Level selection">
+      <div class="scene-atmosphere"></div>
+      <div class="scene-title level-select-title">
+        <p class="scene-kicker">Level Select</p>
+        <h2>Choose Your Training</h2>
+      </div>
+
+      <div class="selector-scene">
+        <section class="selector-panel">
+          <div class="selector-copy">
+            <p class="tutorial-kicker">Workshop Training Path</p>
+            <h3>Complete the simulation first, then pass the safety check.</h3>
+            <p>Progress is saved on this browser. You can replay completed levels any time.</p>
+          </div>
+
+          <div class="level-select landing-level-grid" aria-label="Available levels">
+            <article id="level-1-card" class="level-card landing-level-card">
+              <p class="level-kicker">Level 1</p>
+              <h4>Simulation</h4>
+              <p>Run the guided print workflow: enter the room, slice the model, transfer the file, start the printer, and return the adapter.</p>
+              <button id="level-1-start" class="tutorial-start" type="button">Start Simulation</button>
+              <span id="level-1-status" class="level-lock-copy">Required first level.</span>
+            </article>
+
+            <article id="level-2-card" class="level-card landing-level-card level-card-locked">
+              <p class="level-kicker">Level 2</p>
+              <h4>Safety Check</h4>
+              <p>Answer realistic 3D printer safety scenarios. Missed items return until mastered.</p>
+              <button id="level-2-start" class="tutorial-start level-start-secondary" type="button" disabled>Locked</button>
+              <span id="level-2-status" class="level-lock-copy">Complete Level 1 to unlock.</span>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <script src="level-select.js"></script>
+</body>
+</html>

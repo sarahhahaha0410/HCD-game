@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Level 2 Safety Check | 3D Printing Workshop Training</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="accessibility-themes.css">
+</head>
+<body>
+  <main class="game-shell safety-level-page">
+    <section class="overlay top-bar" aria-label="Safety check interface">
+      <div class="hud-cluster">
+        <div class="title-block">
+          <p class="chapter-label">Workshop Quest</p>
+          <h1>Safety Check</h1>
+        </div>
+
+        <div class="objective-panel">
+          <p class="objective-label">Current Status</p>
+          <p id="objective-text" class="objective-text">
+            Complete the Level 2 safety scenarios.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="overlay utility-cluster" aria-label="Training utilities">
+      <button id="level-select-button" class="utility-button return-button" type="button">Level Select</button>
+      <button id="settings-button" class="utility-button settings-button" type="button" aria-expanded="false" aria-controls="settings-panel">
+        Settings
+      </button>
+    </div>
+
+    <section id="settings-panel" class="overlay settings-panel hidden" aria-label="Display settings">
+      <div class="settings-card">
+        <div>
+          <p class="settings-kicker">Display</p>
+          <h2>Colour Scheme</h2>
+        </div>
+        <div class="theme-choice-grid" role="group" aria-label="Colour scheme choices">
+          <button class="theme-choice" type="button" data-theme-choice="default">Default</button>
+          <button class="theme-choice" type="button" data-theme-choice="protanopia">Protanopia</button>
+          <button class="theme-choice" type="button" data-theme-choice="deuteranopia">Deuteranopia</button>
+          <button class="theme-choice" type="button" data-theme-choice="tritanopia">Tritanopia</button>
+          <button class="theme-choice" type="button" data-theme-choice="achromatopsia">Achromatopsia</button>
+          <button class="theme-choice" type="button" data-theme-choice="high-contrast">High Contrast</button>
+          <button class="theme-choice" type="button" data-theme-choice="night">Night</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene active" aria-label="Level 2 safety check">
+      <div class="scene-atmosphere"></div>
+      <div class="scene-title">
+        <p class="scene-kicker">Level 2</p>
+        <h2>Safety Check</h2>
+      </div>
+
+      <div class="safety-scene">
+        <section class="safety-panel" aria-live="polite">
+          <header class="safety-header">
+            <div>
+              <p class="safety-kicker">3D Printer Safety</p>
+              <h3>Scenario Check</h3>
+              <p>Pick the safest action. Wrong answers return later so every safety point is mastered.</p>
+            </div>
+            <div id="safety-progress" class="safety-progress">Ready</div>
+          </header>
+          <div id="safety-question-card" class="safety-question-card"></div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <script src="safety-level.js"></script>
+</body>
+</html>
